@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <StartupObject>Frontend.App</StartupObject>
+    <AssemblyName>IntroSE.Kanban.Frontend</AssemblyName>
+    <RootNamespace>IntroSE.Kanban.Frontend</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Model\NotifiableModelObject.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="View\Your-Introduction-to-Kanban.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Backend\Backend.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Backend\Backend.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\Your-Introduction-to-Kanban.jpg" />
+  </ItemGroup>
+
+</Project>

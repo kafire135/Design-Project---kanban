@@ -1,0 +1,3 @@
+UPDATE Boards
+SET Owner= Email
+WHERE TaskId= id

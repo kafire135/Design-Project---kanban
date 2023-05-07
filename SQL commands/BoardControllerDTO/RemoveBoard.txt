@@ -1,0 +1,5 @@
+DELETE FROM Boards
+WHERE Boards.BoardId=id
+DELETE FROM UserJoinedBoards
+WHERE UserJoinedBoards.BoardId=id
+

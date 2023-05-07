@@ -1,0 +1,28 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IntroSE.Kanban.Frontend.View"
+        xmlns:ViewModel="clr-namespace:IntroSE.Kanban.Frontend.ViewModel" x:Class="IntroSE.Kanban.Frontend.View.LandingPage"
+        mc:Ignorable="d"
+        Title="LandingPage"
+        Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+        Width="{x:Static SystemParameters.PrimaryScreenWidth}"
+        MinHeight="720" MinWidth="1280"
+        SizeChanged="Window_SizeChanged"
+        WindowState="Maximized" 
+    >
+    <Window.DataContext>
+        <ViewModel:LandingPageViewModel/>
+    </Window.DataContext>
+    <Grid Margin="0,0,0,0">
+        <Image Source="/View/Your-Introduction-to-Kanban.jpg" Margin="{Binding ImageMargin}"/>
+        <Button x:Name="LoginButton" Click="LoginButton_Click" Visibility="{Binding LoginButton.Visibility}" FontSize="25"  Content="{Binding LoginButton.Content}" HorizontalAlignment="Left" Height="46" Margin="{Binding LoginButton.Margin}" VerticalAlignment="Top" Width="188" FontFamily="Perpetua Titling MT" FontStyle="Normal" Background="#FFD0AD6C"/>
+        <Button x:Name="RegisterButton" Click="RegisterButton_Click" Visibility="{Binding RegisterButton.Visibility}" FontSize="25" Content="{Binding RegisterButton.Content}" HorizontalAlignment="Left" Height="46" Margin="{Binding RegisterButton.Margin}" VerticalAlignment="Top" Width="190" FontFamily="Perpetua Titling MT" FontStyle="Normal"  Background="#FFD0AD6C"/>
+        <Button x:Name="ReturnButton" Click="ReturnButton_Click" Content="{Binding ReturnButton.Content}"  FontSize="25" Visibility="{Binding ReturnButton.Visibility}" HorizontalAlignment="Left" Height="46" Margin="{Binding ReturnButton.Margin}" VerticalAlignment="Top" Width="190" FontFamily="Perpetua Titling MT" FontStyle="Normal" Background="#FFD0AD6C"/>
+        <TextBox x:Name="EmailBox" GotKeyboardFocus="TextBox_GotKeyboardFocus" PreviewKeyDown="TextBoxes_PreviewKeyDown" PreviewMouseDown="TextBox_ButtonDown" Visibility="{Binding EmailBox.Visibility}" HorizontalAlignment="Left" Margin="{Binding  EmailBox.Margin}" TextWrapping="NoWrap" Text="{Binding EmailBox.Content}" VerticalAlignment="Top" Height="30" Width="250" IsEnabled="True" TextAlignment="Center" VerticalContentAlignment="Center" FontSize="15" FontFamily="Calibri Light" />
+        <TextBox x:Name="PasswordBox" GotKeyboardFocus="TextBox_GotKeyboardFocus" PreviewKeyDown="TextBoxes_PreviewKeyDown" PreviewMouseDown="TextBox_ButtonDown" Visibility="{Binding PasswordBox.Visibility}" HorizontalAlignment="Left" Margin="{Binding PasswordBox.Margin}" TextWrapping="NoWrap" Text="{Binding PasswordBox.Content}" Height="30" VerticalAlignment="Top" Width="250" IsEnabled="True" TextAlignment="Center" VerticalContentAlignment="Center" FontSize="15" FontFamily="Calibri Light"/>
+        <Label x:Name="ErrorMessage" Content="{Binding ErrorMessage.Content}" Width="250" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" HorizontalAlignment="Left" Margin="{Binding ErrorMessage.Margin}" Visibility="{Binding ErrorMessage.Visibility}" VerticalAlignment="Top" FontFamily="Calibri Light" Foreground="Red" Background="#FFDCD3D3"/>
+    </Grid>
+</Window>

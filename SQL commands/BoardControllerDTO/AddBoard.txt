@@ -1,0 +1,2 @@
+INSERT into Boards (BoardId, BoardTitle, Owner, BacklogLimit, InprogressLimit, DoneLimit)
+VALUES (board.Id, board.Title, board.Owner, board.BackLogLimit, board.InProgressLimit, board.DoneLimit)

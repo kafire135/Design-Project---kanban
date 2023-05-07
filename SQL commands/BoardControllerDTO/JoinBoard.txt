@@ -1,0 +1,2 @@
+INSERT into UserJoinedBoards (BoardId, Email)
+VALUES (id, email)

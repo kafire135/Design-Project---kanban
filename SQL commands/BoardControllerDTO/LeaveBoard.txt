@@ -1,0 +1,1 @@
+DELETE FROM UserJoinedBoards WHERE BoardId= id and Email= Email

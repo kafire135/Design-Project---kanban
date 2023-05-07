@@ -1,0 +1,3 @@
+UPDATE Boards
+SET InprogressLimit = limit
+WHERE BoardId=id;

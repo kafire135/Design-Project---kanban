@@ -1,0 +1,2 @@
+INSERT INTO Tasks (BoardId,TaskId,TaskTitle,Assignee,Description,CreationTime,DueDate,State)
+VALUES(boardId,task.Id,task.Title,task.Assignee,task.Description.task.CreationTime,task.DueDate.Year/task.DueDate.Month/task.DueDate.Day,(int)task.State)

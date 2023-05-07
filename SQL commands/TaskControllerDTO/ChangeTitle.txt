@@ -1,0 +1,3 @@
+UPDATE Tasks
+SET TaskTitle = newTitle
+WHERE BoardId = boardId, TaskId = taskId 
